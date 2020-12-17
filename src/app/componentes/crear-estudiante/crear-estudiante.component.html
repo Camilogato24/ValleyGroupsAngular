@@ -1,0 +1,22 @@
+<form [formGroup]="estudiantesForm" (ngSubmit)="onSubmit()">
+    <div class="p-fluid">
+        <div class="p-field">
+            <label>Nombre</label>
+            <input type="text" formControlName="nombre" pInputText class="p-inputtext-lg">
+        </div>
+        <div class="p-field">
+            <label>Estudiante activo?</label>
+            <div>
+                <p-inputSwitch formControlName="activo"></p-inputSwitch>
+            </div>
+
+        </div>
+        <div class="p-field">
+            <label>Curso</label>
+            <input type="text" formControlName="curso" pInputText class="p-inputtext-lg" />
+        </div>
+        <div class="p-field">
+            <button pButton type="submit" label="Agregar" [disabled]="!estudiantesForm.valid"></button>
+        </div>
+    </div>
+</form>
